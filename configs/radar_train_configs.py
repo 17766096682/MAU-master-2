@@ -11,7 +11,7 @@ def configs():
     parser.add_argument('--data_test_path', type=str, default='../data/')
     parser.add_argument('--pretrained_model', type=str, default='')
     parser.add_argument('--is_training', type=str, default='True')
-    parser.add_argument('--device', type=str, default='cuda:1')
+    parser.add_argument('--device', type=str, default='cuda:0')
     parser.add_argument('--input_length', type=int, default=5)
     parser.add_argument('--real_length', type=int, default=15)
     parser.add_argument('--total_length', type=int, default=15)

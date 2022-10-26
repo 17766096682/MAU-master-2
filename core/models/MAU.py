@@ -54,7 +54,7 @@ class RNN(nn.Module):
                                                 ))
             # 我的修改
             encoder.add_module(name="res_cbam{0}".format(i),
-                               module=ResBlock_CBAM(self.num_hidden[0], num_hidden[0] / 4, downsampling=True))
+                               module=ResBlock_CBAM(self.num_hidden[0], int(num_hidden[0] / 4), downsampling=True))
 
             encoder.add_module(name='encoder_t_relu{0}'.format(i),
                                module=nn.LeakyReLU(0.2))
