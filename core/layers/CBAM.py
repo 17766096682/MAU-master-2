@@ -86,7 +86,9 @@ class ResBlock_CBAM(nn.Module):
 
 
 if __name__ == '__main__':
-    model = ResBlock_CBAM(in_places=16, places=4,downsampling=True)
-    input = torch.randn(1, 16, 64, 64)
+    model = ResBlock_CBAM(in_places=64, places=4,downsampling=True)
+    print("Model size: {:.5f}M".format(sum(p.numel() for p in model.parameters()) / 1000000.0))
+
+    input = torch.randn(1, 64, 64, 64)
     out = model(input)
     print(out.shape)
